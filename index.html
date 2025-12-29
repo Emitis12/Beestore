@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BeeStore - Bald Hair Kit (Hair Fibers)</title>
 <style>
 /* MODERN PREMIUM STYLING */
@@ -330,6 +331,54 @@ footer a:hover { text-decoration:underline; }
   .inline-group { flex-direction:column; }
   .feature-cards, .steps, .testimonial-cards, .before-after-images, .pack-items, #results { flex-direction:column; align-items:center; }
 }
+
+  /* ============================= */
+/* FINAL HORIZONTAL SCROLL FIX   */
+/* (SAFE OVERRIDES ONLY)         */
+/* ============================= */
+
+/* Fix 100vw overflow issues */
+body > * {
+  max-width: 100%;
+}
+
+/* Contain flex & grid overflow */
+.container,
+section,
+#hero,
+#results,
+.checkout,
+.how-content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Fix buttons & inputs causing micro overflow */
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+}
+
+/* Prevent long text from forcing width */
+p,
+h1,
+h2,
+h3,
+label,
+span {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* iOS & Chrome mobile flex bug fix */
+@media (max-width: 480px) {
+  * {
+    max-width: 100%;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -629,4 +678,5 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 </script>
 </body>
 </html>
+
 
