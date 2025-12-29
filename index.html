@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>BeeStore - Bald Hair Kit (Hair Fibers)</title>
+<style>
+/* MODERN PREMIUM STYLING */
+
+/* BODY & FONTS */
+body {
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+a { text-decoration: none; color: inherit; }
+
+/* HEADER */
+header {
+  width: 100%;
+  background: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+header h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+  color: #f5b301;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* HERO SECTION WITH IMAGE BACKGROUND */
+#hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 40px;
+  gap: 40px;
+  background: url('images/imgback2.jpg') center/cover no-repeat;
+  border-radius: 0 0 50px 50px;
+  color: #fff;
+}
+.hero-image { flex:1; min-width:300px; }
+.hero-image img {
+  width:100%;
+  border-radius:0;
+  box-shadow:none;
+}
+.hero-text { flex:1; min-width:300px; padding:0 20px; }
+.hero-text h1 {
+  font-size:48px;
+  margin-bottom:20px;
+  color:black;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+.hero-text p {
+  font-size:20px;
+  margin-bottom:30px;
+  color:black;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+.hero-text a {
+  display:inline-block;
+  padding:18px 36px;
+  background: linear-gradient(90deg,#f5b301,#f2a500);
+  color:#fff;
+  font-weight:700;
+  border-radius:12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transition:0.4s;
+}
+.hero-text a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* FEATURES SECTION */
+#features {
+  background:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+#features h2 {
+  font-size:32px;
+  margin-bottom:40px;
+}
+.feature-cards {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap:30px;
+}
+.feature-card {
+  max-width:250px;
+  background:#fff;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  text-align:center;
+  transition:0.4s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow:0 15px 30px rgba(0,0,0,0.12);
+}
+.feature-card img { width:80px; margin-bottom:15px; }
+
+/* BEFORE & AFTER SECTION */
+#before-after {
+  padding:60px 20px;
+  background:#f9f9f9;
+  text-align:center;
+}
+#before-after h2 {
+  font-size:32px;
+  margin-bottom:40px;
+}
+.before-after-images {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+.before-after-images div {
+  max-width:300px;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+  transition:0.3s;
+}
+.before-after-images div:hover {
+  transform: scale(1.03);
+}
+.before-after-images img { width:100%; display:block; }
+
+/* HOW IT WORKS SECTION */
+#how-it-works {
+  padding:60px 20px;
+  background:#fff;
+  text-align:center;
+}
+#how-it-works h2 {
+  font-size:32px;
+  margin-bottom:40px;
+}
+.how-content {
+  max-width:900px;
+  margin:0 auto;
+  text-align:left;
+}
+.how-content iframe {
+  width:100%;
+  height:500px;
+  border:none;
+  border-radius:15px;
+  margin-bottom:30px;
+}
+.how-content p {
+  font-size:16px;
+  line-height:1.6;
+  margin-bottom:15px;
+}
+
+/* GET RESULTS IN SECONDS */
+#results {
+  padding:60px 20px;
+  background:#f9f9f9;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:30px;
+}
+#results img { max-width:300px; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.1); }
+#results-text { max-width:500px; font-size:16px; line-height:1.6; }
+
+/* WHAT'S INSIDE THE PACK */
+#whats-inside {
+  padding:60px 20px;
+  background:#fff;
+  text-align:center;
+}
+.pack-items {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+.pack-item {
+  max-width:300px;
+  text-align:center;
+}
+.pack-item img { width:100%; border-radius:15px; margin-bottom:15px; }
+.pack-item p { font-size:16px; line-height:1.5; }
+
+/* CHECKOUT FORM */
+.checkout {
+  max-width:520px;
+  background:#fff;
+  padding:40px 30px;
+  margin:50px auto;
+  border-radius:25px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.12);
+  border-top:6px solid #f5b301;
+}
+.checkout h2 {
+  text-align:center;
+  margin-bottom:20px;
+  font-size:28px;
+}
+.checkout ul.ticks { list-style:none; padding:0; margin-bottom:20px; }
+.checkout ul.ticks li {
+  display:flex;
+  align-items:flex-start;
+  margin-bottom:10px;
+  font-size:15px;
+}
+.checkout ul.ticks li::before {
+  content:'✔';
+  color:green;
+  margin-right:10px;
+}
+label {
+  font-weight:600;
+  display:block;
+  margin-top:15px;
+  color:#555;
+}
+input, select, textarea {
+  width:100%;
+  padding:14px 18px;
+  margin-top:6px;
+  border:1px solid #eee;
+  border-radius:12px;
+  box-sizing:border-box;
+  font-size:16px;
+  transition:0.4s;
+}
+input:focus, select:focus, textarea:focus {
+  outline:none;
+  border-color:#f5b301;
+  box-shadow:0 0 12px rgba(245,179,1,0.3);
+}
+.inline-group {
+  display:flex;
+  gap:15px;
+}
+.inline-group input, .inline-group select { flex:1; }
+
+.product-list {
+  list-style:none;
+  padding:0;
+  margin:15px 0;
+}
+.product-item {
+  display:flex;
+  align-items:center;
+  border:1px solid #ddd;
+  padding:12px;
+  margin-bottom:12px;
+  cursor:pointer;
+  border-radius:15px;
+  transition:0.4s;
+}
+.product-item:hover { transform: translateY(-3px); box-shadow:0 10px 25px rgba(0,0,0,0.12); }
+.product-item.selected {
+  border-color:#f5b301;
+  background:#fff8e1;
+}
+.product-item img { width:50px; margin-right:12px; border-radius:5px; }
+.product-item input { margin-right:10px; cursor:pointer; }
+
+.addon-header { font-weight:600; margin-top:25px; }
+.addon {
+  display:flex;
+  align-items:center;
+  margin-top:12px;
+  border:1px solid #ddd;
+  padding:12px;
+  border-radius:15px;
+  transition:0.4s;
+}
+.addon:hover { transform: translateY(-3px); box-shadow:0 10px 25px rgba(0,0,0,0.12); }
+.addon img { width:60px; margin-right:12px; }
+
+.total {
+  font-size:20px;
+  font-weight:700;
+  margin-top:20px;
+  color:#222;
+  text-align:right;
+}
+
+button {
+  width:100%;
+  background:linear-gradient(90deg,#f5b301,#f2a500);
+  color:#fff;
+  padding:14px;
+  margin-top:25px;
+  border:none;
+  border-radius:15px;
+  font-size:18px;
+  cursor:pointer;
+  font-weight:700;
+  box-shadow:0 6px 20px rgba(0,0,0,0.2);
+  transition:0.4s;
+}
+button:hover { transform: translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,0.25); }
+
+/* FOOTER */
+footer {
+  background:#111;
+  color:#eee;
+  padding:50px 20px;
+  text-align:center;
+}
+footer a { color:#f5b301; font-weight:600; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  #hero { flex-direction:column; padding:60px 20px; }
+  .inline-group { flex-direction:column; }
+  .feature-cards, .steps, .testimonial-cards, .before-after-images, .pack-items, #results { flex-direction:column; align-items:center; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<!-- <header>
+  <h1>BeeStore</h1>
+</header> -->
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-image">
+    <img src="images/dexe.png" alt="Bald Hair Kit">
+  </div>
+  <div class="hero-text">
+    <h1>Bald Hair Kit (Pack of 2) <br> Price: N25,000</h1>
+    <p>Our Bald Hair Kit provides premium hair fibers for instant natural-looking hair coverage, concealing hair loss, bald spot and thinning hair. Make your hair look thick and full instantly.</p>
+    <a href="#checkout">Buy Now</a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <h2>Why Choose Bald Hair Kit?</h2>
+  <div class="feature-cards">
+    <div class="feature-card">
+      <img src="images/instant.jpg" alt="Instant Coverage">
+      <h3>Instant Coverage</h3>
+      <p>Conceals bald spots immediately for a natural look.</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/dexe.png" alt="Premium Fibers">
+      <h3>Premium Fibers</h3>
+      <p>High-quality fibers blend seamlessly with your hair.</p>
+    </div>
+    <div class="feature-card">
+      <img src="images/app.jpg" alt="Easy to Use">
+      <h3>Easy to Use</h3>
+      <p>Quick and simple application for daily use.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE & AFTER -->
+<section id="before-after">
+  <h2>Before & After</h2>
+  <div class="before-after-images">
+    <div><img src="images/before5.jpg" alt="Before/After 1"></div>
+    <div><img src="images/before4.jpg" alt="Before/After 2"></div>
+    <div><img src="images/before1.jpg" alt="Before/After 3"></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <h2>How It Works</h2>
+  <div class="how-content">
+    <iframe src="https://www.youtube.com/embed/SE2Kz0fqixc" allowfullscreen></iframe>
+    <p>The Bald Hair Kit is used to cover up the places where you have bald spots.</p>
+    <p>From the beginning of the video, you could see that something was applied on the head to cover the bald spots.</p>
+    <p>And, as it was applied, the bald spots were covered. It’s in a powder form and called “hair building fibers” because the powder is made of fibers.</p>
+    <p>You can rewatch the video, while paying more attention.</p>
+    <p>At some point in the video, a “LOCK SPRAY” was used to harden the surface so that what you applied can last for days/weeks.</p>
+    <p>You can always re-apply, as it’s a cosmetic solution.</p>
+    <p><strong>Please Note:</strong> It’s not permanent, you will have to reapply after it fades, as it’s a cosmetic solution. An application can last for days/weeks.</p>
+    <p>The Kit is N25,000 and contains 2 items (Pack Of 2):</p>
+    <p><strong>1. Hair Building Fibers</strong><br>The hair building fibers are in powder form and is used to fill up the bald spots where you want to cover up.</p>
+    <p><strong>2. LOCK SPRAY</strong><br>The lock or hold spray is used to spray at the same places you filled up so that it can harden the place to prevent the powder from falling off.</p>
+    <a href="#checkout" style="display:inline-block;padding:15px 30px;background:#f5b301;color:#fff;font-weight:700;border-radius:10px;margin-top:15px;">Order Now</a>
+  </div>
+</section>
+
+<!-- GET RESULTS IN SECONDS -->
+<section id="results">
+  <img src="images/dexepack.jpg" alt="Get Results">
+  <div id="results-text">
+    <p><strong>ANY SIDE EFFECTS?</strong><br>No side effects or allergens have been detected. The product is safe to use and approved by our cosmetic science team and meets all European standards for safety.</p>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE THE PACK -->
+<section id="whats-inside">
+  <h2>What's Inside The Pack</h2>
+  <div class="pack-items">
+    <div class="pack-item">
+      <img src="images/hairfiber.jpeg" alt="Hair Building Fibers">
+      <p><strong>HAIR BUILDING FIBERS</strong><br>The Hair Building Fibres is used to fill up the BALD places where you want to cover up.</p>
+    </div>
+    <div class="pack-item">
+      <img src="images/lockspray.jpg" alt="Fiber Hold Spray">
+      <p><strong>FIBER HOLD SPRAY</strong><br>The Fiber Hold Spray is used to spray at the bald places you filled so that it can hold firmly, thereby making it water resistant.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKOUT FORM -->
+<div class="checkout" id="checkout">
+  <h2>Order Now, Pay On Delivery! <br> Plus Free Shipping!!</h2>
+  <ul class="ticks">
+    <li>We offer PAYMENT ON DELIVERY, you pay at the point of delivery.</li>
+    <li>Please, only order if you're really interested in this product and you have the money ready.</li>
+    <li>Only order If you know you will NOT disappoint us at point of delivery by not picking calls or showing up. Please</li>
+    <li>WE DELIVER SAME DAY OR NEXT DAY</li>
+  </ul>
+
+<form id="orderForm">
+<label>Full Name</label>
+<input id="name" required>
+
+<div class="inline-group">
+  <div>
+    <label>State</label>
+    <select id="state" required>
+      <option value="">Select State</option>
+      <option value="Abia">Abia</option>
+      <option value="Adamawa">Adamawa</option>
+      <option value="Akwa Ibom">Akwa Ibom</option>
+      <option value="Anambra">Anambra</option>
+      <option value="Bauchi">Bauchi</option>
+      <option value="Bayelsa">Bayelsa</option>
+      <option value="Benue">Benue</option>
+      <option value="Borno">Borno</option>
+      <option value="Cross River">Cross River</option>
+      <option value="Delta">Delta</option>
+      <option value="Ebonyi">Ebonyi</option>
+      <option value="Edo">Edo</option>
+      <option value="Ekiti">Ekiti</option>
+      <option value="Enugu">Enugu</option>
+      <option value="FCT">FCT</option>
+      <option value="Gombe">Gombe</option>
+      <option value="Imo">Imo</option>
+      <option value="Jigawa">Jigawa</option>
+      <option value="Kaduna">Kaduna</option>
+      <option value="Kano">Kano</option>
+      <option value="Katsina">Katsina</option>
+      <option value="Kebbi">Kebbi</option>
+      <option value="Kogi">Kogi</option>
+      <option value="Kwara">Kwara</option>
+      <option value="Lagos">Lagos</option>
+      <option value="Nasarawa">Nasarawa</option>
+      <option value="Niger">Niger</option>
+      <option value="Ogun">Ogun</option>
+      <option value="Ondo">Ondo</option>
+      <option value="Osun">Osun</option>
+      <option value="Oyo">Oyo</option>
+      <option value="Plateau">Plateau</option>
+      <option value="Rivers">Rivers</option>
+      <option value="Sokoto">Sokoto</option>
+      <option value="Taraba">Taraba</option>
+      <option value="Yobe">Yobe</option>
+      <option value="Zamfara">Zamfara</option>
+    </select>
+  </div>
+  <div>
+    <label>Town / City</label>
+    <input id="city" required>
+  </div>
+</div>
+
+<label>Street Address</label>
+<textarea id="address" required></textarea>
+
+<label>Email</label>
+<input type="email" id="email" required>
+
+<div class="inline-group">
+  <div>
+    <label>Phone Number</label>
+    <input id="phone" required>
+  </div>
+  <div>
+    <label>Alternative Phone (optional)</label>
+    <input id="altPhone">
+  </div>
+</div>
+
+<label>Select Product</label>
+<ul class="product-list" id="productList">
+  <li class="product-item" data-value="1 Bald Hair Kit" data-price="25000">
+    <input type="radio" name="product">
+    <img src="images/dexe.png" alt="Bald Hair Kit">
+    1 Bald Hair Kit – ₦25,000
+  </li>
+  <li class="product-item" data-value="2 Bald Hair Kit" data-price="47000">
+    <input type="radio" name="product">
+    <img src="images/dexe.png" alt="Bald Hair Kit">
+    2 Bald Hair Kits – ₦47,000
+  </li>
+  <li class="product-item" data-value="3 Bald Hair Kit (1 Refill Sachet)" data-price="70000">
+    <input type="radio" name="product">
+    <img src="images/dexe.png" alt="Bald hair Kit">
+    3 Bald Hair Kit (& 1 free Refill Sachet of N10,000) – ₦70,000
+  </li>
+</ul>
+
+<p class="addon-header">1 Refill Sachet (For Refilling when exhausted)</p>
+<div class="addon">
+  <img src="images/refill.jpg" alt="Refil Sachet">
+  <div>
+    <label>
+      <input type="checkbox" id="addon" data-price="10000">
+      1 Refill Sachet (+₦10,000)
+    </label>
+  </div>
+</div>
+
+<div class="total">
+  Total: ₦<span id="total">0</span>
+</div>
+
+<button type="submit">Place Order</button>
+<H2>SEND US A MESSAGE ON WHATSAPP AT 09135231848 for any questions/inquiries.</H2>
+</form>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 BeeStore. All Rights Reserved.</p>
+  <p><a href="#hero">Back to Top</a></p>
+</footer>
+
+<script>
+/* PRODUCT SELECTION & TOTAL CALCULATION */
+const productItems = document.querySelectorAll(".product-item");
+const addon = document.getElementById("addon");
+const totalDisplay = document.getElementById("total");
+
+let selectedProductValue = "";
+let selectedProductPrice = 0;
+
+productItems.forEach(item => {
+  item.addEventListener("click", () => {
+    productItems.forEach(i => i.classList.remove("selected"));
+    item.classList.add("selected");
+    item.querySelector('input[type="radio"]').checked = true;
+    selectedProductValue = item.dataset.value;
+    selectedProductPrice = Number(item.dataset.price);
+    calculateTotal();
+  });
+});
+
+function calculateTotal() {
+  let total = selectedProductPrice;
+  if (addon.checked) total += Number(addon.dataset.price);
+  totalDisplay.textContent = total.toLocaleString();
+}
+
+addon.addEventListener("change", calculateTotal);
+
+/* FORM SUBMISSION */
+document.getElementById("orderForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  if(!selectedProductValue){
+    alert("Please select a product.");
+    return;
+  }
+  const orderData = {
+    name: name.value,
+    state: state.value,
+    city: city.value,
+    address: address.value,
+    email: email.value,
+    phone: phone.value,
+    altPhone: altPhone.value,
+    product: selectedProductValue,
+    addon: addon.checked ? "Styling Spray" : "None",
+    total: totalDisplay.textContent
+  };
+  fetch("https://script.google.com/macros/s/AKfycbwPU-yKgzPWkCwwqPH7hFb9fP-648S0fMWMLhkE7R2l-pQGDPFTICvEPQP5sFBPfxSS/exec", {
+    method: "POST",
+    body: JSON.stringify(orderData)
+  })
+  .then(() => {
+    alert("Order placed successfully!");
+    this.reset();
+    totalDisplay.textContent = "0";
+    selectedProductValue = "";
+    selectedProductPrice = 0;
+    productItems.forEach(i => i.classList.remove("selected"));
+  })
+  .catch(() => alert("Error submitting order"));
+});
+</script>
+</body>
+</html>
