@@ -579,13 +579,15 @@ function calculateTotal() {
 
 addon.addEventListener("change", calculateTotal);
 
-/* FORM SUBMISSION */
+/* ✅ FORM SUBMISSION (FIXED) */
 document.getElementById("orderForm").addEventListener("submit", function(e){
   e.preventDefault();
+
   if(!selectedProductValue){
     alert("Please select a product.");
     return;
   }
+
   const orderData = {
     name: name.value,
     state: state.value,
@@ -595,23 +597,36 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
     phone: phone.value,
     altPhone: altPhone.value,
     product: selectedProductValue,
-    addon: addon.checked ? "Styling Spray" : "None",
-    total: totalDisplay.textContent
+    addon: addon.checked ? "1 Refill Sachet" : "None",
+    total: totalDisplay.textContent.replace(/,/g, "")
   };
+
   fetch("https://script.google.com/macros/s/AKfycbwPU-yKgzPWkCwwqPH7hFb9fP-648S0fMWMLhkE7R2l-pQGDPFTICvEPQP5sFBPfxSS/exec", {
     method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
     body: JSON.stringify(orderData)
   })
-  .then(() => {
-    alert("Order placed successfully!");
-    this.reset();
-    totalDisplay.textContent = "0";
-    selectedProductValue = "";
-    selectedProductPrice = 0;
-    productItems.forEach(i => i.classList.remove("selected"));
+  .then(res => res.json())
+  .then(data => {
+    if(data.status === "success"){
+      alert("Order placed successfully!");
+      this.reset();
+      totalDisplay.textContent = "0";
+      selectedProductValue = "";
+      selectedProductPrice = 0;
+      productItems.forEach(i => i.classList.remove("selected"));
+    } else {
+      alert("Error: " + data.message);
+    }
   })
-  .catch(() => alert("Error submitting order"));
+  .catch(err => {
+    alert("Network error. Please try again.");
+    console.error(err);
+  });
 });
 </script>
 </body>
 </html>
+
