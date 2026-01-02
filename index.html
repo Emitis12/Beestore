@@ -651,12 +651,10 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
   };
 
   fetch("https://script.google.com/macros/s/AKfycbwPU-yKgzPWkCwwqPH7hFb9fP-648S0fMWMLhkE7R2l-pQGDPFTICvEPQP5sFBPfxSS/exec", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(orderData)
-  })
+  method: "POST",
+  body: JSON.stringify(orderData),
+  redirect: "follow"
+})
   .then(res => res.json())
   .then(data => {
     if(data.status === "success"){
@@ -678,5 +676,6 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 </script>
 </body>
 </html>
+
 
 
