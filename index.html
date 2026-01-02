@@ -652,30 +652,40 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 
   fetch("https://script.google.com/macros/s/AKfycbwPU-yKgzPWkCwwqPH7hFb9fP-648S0fMWMLhkE7R2l-pQGDPFTICvEPQP5sFBPfxSS/exec", {
   method: "POST",
-  body: JSON.stringify(orderData),
-  redirect: "follow"
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(orderData)
 })
-  .then(res => res.json())
-  .then(data => {
-    if(data.status === "success"){
-      alert("Order placed successfully!");
-      this.reset();
-      totalDisplay.textContent = "0";
-      selectedProductValue = "";
-      selectedProductPrice = 0;
-      productItems.forEach(i => i.classList.remove("selected"));
-    } else {
-      alert("Error: " + data.message);
-    }
-  })
-  .catch(err => {
-    alert("Network error. Please try again.");
-    console.error(err);
-  });
+.then(async res => {
+  const text = await res.text(); // 👈 IMPORTANT
+  try {
+    return JSON.parse(text);
+  } catch {
+    throw new Error(text);
+  }
+})
+.then(data => {
+  if (data.status === "success") {
+    alert("Order placed successfully!");
+    document.getElementById("orderForm").reset();
+    totalDisplay.textContent = "0";
+    selectedProductValue = "";
+    selectedProductPrice = 0;
+    productItems.forEach(i => i.classList.remove("selected"));
+  } else {
+    alert("Error: " + data.message);
+  }
+})
+.catch(err => {
+  alert("Submission failed: " + err.message);
+  console.error(err);
+});
 });
 </script>
 </body>
 </html>
+
 
 
 
