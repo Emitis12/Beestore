@@ -649,7 +649,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
   formData.append("addon", addon.checked ? "1 Refill Sachet" : "None");
   formData.append("total", totalDisplay.textContent.replace(/,/g, ""));
 
-  fetch("https://script.google.com/macros/s/AKfycbzRypaBz4L46k2Jk6_h-W-nlbgZk5mrKikx3_6vb7pGoG1t84wpj2Mq3zG7XZpEctjl/exec", {
+  fetch("https://script.google.com/macros/s/AKfycbwJ98MYH3zXxVgrP05YVlz1nsChmQZfQZR_Bk6evI0WI54RIhaFTamKhE9mHPy_eszj/exec", {
     method: "POST",
     body: formData
   })
@@ -675,6 +675,7 @@ document.getElementById("orderForm").addEventListener("submit", function(e){
 </script>
 </body>
 </html>
+
 
 
 
